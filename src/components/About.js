@@ -48,7 +48,7 @@ export default function About() {
         </motion.p>
 
         <motion.p
-          className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center"
+          className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center mb-8"
           variants={itemVariants}
         >
           As Founder & CEO of <strong>Datamesolution Technologies</strong>, I
@@ -56,6 +56,18 @@ export default function About() {
           digital services—empowering 12,000+ Nigerians with seamless access to
           data, airtime, cable TV, and more.
         </motion.p>
+
+        <motion.div className="text-center" variants={itemVariants}>
+          <a
+            href="https://drive.google.com/file/d/151kDFneXLGqrYy0jJO06x7DIysUdkxYl/view?usp=drive_link" 
+            download
+            target="_blank" // This makes it open in a new tab
+            rel="noopener noreferrer" // This improves security when opening in a new tab
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition-colors"
+          >
+            Download CV
+          </a>
+        </motion.div>
       </motion.div>
     </section>
   );
