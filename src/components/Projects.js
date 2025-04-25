@@ -19,16 +19,19 @@ const featured = [
     title: "Datamesolution Technologies",
     desc: "Integrated platform for seamless data, airtime, and digital services—serving over 50K monthly transactions.",
     icon: <Smartphone size={24} aria-hidden="true" />,
+    url: "https://datamesolution.com/",
   },
   {
     title: "Brainbench Academy",
     desc: "Assisted in Tech bootcamps and World Bank–supported programs, equipping 1,200+ students with in‑demand skills.",
     icon: <Globe size={24} aria-hidden="true" />,
+    url: "https://web.facebook.com/bba.com.ng/?_rdc=1&_rdr#",
   },
   {
     title: "Davimart Provisions",
-    desc: "Established a retail venture providing essential goods at affordable prices in Ekiti State, enhancing community access to daily necessities..",
+    desc: "Established a retail venture providing essential goods at affordable prices in Ekiti State, enhancing community access to daily necessities.",
     icon: <ShoppingCart size={24} aria-hidden="true" />,
+    url: "https://g.co/kgs/bE9Bzdv",
   },
 ];
 
@@ -66,21 +69,28 @@ export default function FeaturedWork() {
         variants={containerVariants}
       >
         {featured.map((item, index) => (
-          <motion.div
+          <a
             key={index}
-            className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow hover:shadow-lg transition-shadow focus-within:ring-2 ring-blue-500"
-            variants={cardVariants}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-2xl"
           >
-            <div className="text-blue-600 dark:text-blue-400 mb-4 mx-auto">
-              {item.icon}
-            </div>
-            <h3 className="font-semibold text-xl mb-2 text-gray-800 dark:text-white text-center">
-              {item.title}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 text-center">
-              {item.desc}
-            </p>
-          </motion.div>
+            <motion.div
+              className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow hover:shadow-lg transition-shadow h-full"
+              variants={cardVariants}
+            >
+              <div className="text-blue-600 dark:text-blue-400 mb-4 mx-auto">
+                {item.icon}
+              </div>
+              <h3 className="font-semibold text-xl mb-2 text-gray-800 dark:text-white text-center">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 text-center">
+                {item.desc}
+              </p>
+            </motion.div>
+          </a>
         ))}
       </motion.div>
     </section>

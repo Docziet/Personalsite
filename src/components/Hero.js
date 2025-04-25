@@ -14,7 +14,7 @@ const buttonVariants = {
 export default function Hero() {
   return (
     <section
-      className="relative h-screen flex flex-col items-center justify-center bg-cover bg-center overflow-hidden"
+      className="relative h-screen flex flex-col items-center justify-center bg-cover bg-center md:bg-top overflow-hidden"
       style={{ backgroundImage: `url(${heroImg})` }}
       aria-label="Hero background image"
     >

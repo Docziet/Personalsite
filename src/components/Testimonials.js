@@ -12,14 +12,15 @@ const testimonials = [
   {
     name: "Olosunde Vincent.",
     role: "Partner",
-    avatar: "/avatars/timi.jpg",
-    comment: "David’s content has made my design work so much easier. His clarity and creativity have boosted my productivity and streamlined my process",
+    avatar: `${process.env.PUBLIC_URL}/avatars/timi.jpg`,
+    comment:
+      "David’s content has made my design work so much easier. His clarity and creativity have boosted my productivity and streamlined my process",
     rating: 5,
   },
   {
     name: "Micheal",
     role: "Student",
-    avatar: "/avatars/micheal.jpg",
+    avatar: `${process.env.PUBLIC_URL}/avatars/micheal.jpg`,
     comment:
       "David’s style of teaching digital literacy is unmatched. I feel empowered.",
     rating: 4,
@@ -27,7 +28,7 @@ const testimonials = [
   {
     name: "Marvellous A..",
     role: "Stakeholder",
-    avatar: "/avatars/marvellous.jpeg",
+    avatar: `${process.env.PUBLIC_URL}/avatars/marvellous.jpeg`,
     comment:
       "Datamesolution helped reduce costs for over 1000 users in my institution.",
     rating: 5,
