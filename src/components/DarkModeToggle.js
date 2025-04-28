@@ -1,10 +1,10 @@
 // src/components/DarkModeToggle.js
 
 import React, { useEffect, useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa"; // Import icons from react-icons
 
 const DarkModeToggle = () => {
   const [theme, setTheme] = useState(() => {
-    // Check localStorage for theme preference
     if (typeof window !== "undefined") {
       return localStorage.getItem("theme") || "light";
     }
@@ -12,13 +12,11 @@ const DarkModeToggle = () => {
   });
 
   useEffect(() => {
-    // Apply the theme to the <html> element
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-    // Store the user's preference in localStorage
     localStorage.setItem("theme", theme);
   }, [theme]);
 
@@ -29,9 +27,14 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="px-3 py-2 rounded-md bg-gray-200 dark:bg-gray-700 text-sm font-medium"
+      className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md"
+      aria-label="Toggle Dark Mode"
     >
-      {theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
+      {theme === "dark" ? (
+        <FaSun className="w-5 h-5" /> // Show Sun icon in dark mode (to switch back to light)
+      ) : (
+        <FaMoon className="w-5 h-5" /> // Show Moon icon in light mode (to switch to dark)
+      )}
     </button>
   );
 };

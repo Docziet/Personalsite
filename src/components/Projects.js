@@ -69,28 +69,34 @@ export default function FeaturedWork() {
         variants={containerVariants}
       >
         {featured.map((item, index) => (
-          <a
+          <motion.div
             key={index}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-2xl"
+            className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow hover:shadow-lg transition-shadow h-full flex flex-col justify-between"
+            variants={cardVariants}
           >
-            <motion.div
-              className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow hover:shadow-lg transition-shadow h-full"
-              variants={cardVariants}
-            >
-              <div className="text-blue-600 dark:text-blue-400 mb-4 mx-auto">
+            <div>
+              <div className="text-blue-600 dark:text-blue-400 mb-4 mx-auto flex justify-center">
                 {item.icon}
               </div>
               <h3 className="font-semibold text-xl mb-2 text-gray-800 dark:text-white text-center">
                 {item.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-center">
+              <p className="text-gray-600 dark:text-gray-300 text-center mb-4">
                 {item.desc}
               </p>
-            </motion.div>
-          </a>
+            </div>
+
+            <div className="text-center mt-4">
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+              >
+                Learn More
+              </a>
+            </div>
+          </motion.div>
         ))}
       </motion.div>
     </section>
