@@ -59,7 +59,7 @@ export default function About() {
 
         <motion.div className="text-center" variants={itemVariants}>
           <a
-            href="https://drive.google.com/file/d/151kDFneXLGqrYy0jJO06x7DIysUdkxYl/view?usp=drive_link" 
+            href="https://drive.google.com/file/d/1pmGungWKHbU8Qa_WRfb8JNllgv5DSVFj/view?usp=sharing"
             download
             target="_blank" // This makes it open in a new tab
             rel="noopener noreferrer" // This improves security when opening in a new tab
