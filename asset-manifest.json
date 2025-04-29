@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Personalsite/static/css/main.7b210f71.css",
-    "main.js": "/Personalsite/static/js/main.4e2af5f9.js",
+    "main.js": "/Personalsite/static/js/main.073cdee3.js",
     "static/media/dopics.jpg": "/Personalsite/static/media/dopics.1d1040c3ab4a3b8e239f.jpg",
     "static/media/In Igbo Attire .jpg": "/Personalsite/static/media/In Igbo Attire .97dd4e500700cdc48988.jpg",
     "static/media/sitigbo.jpg": "/Personalsite/static/media/sitigbo.172ab5c0c55268b15e92.jpg",
@@ -9,10 +9,10 @@
     "static/media/Playful David .jpg": "/Personalsite/static/media/Playful David .80c379e4038c38c2431c.jpg",
     "index.html": "/Personalsite/index.html",
     "main.7b210f71.css.map": "/Personalsite/static/css/main.7b210f71.css.map",
-    "main.4e2af5f9.js.map": "/Personalsite/static/js/main.4e2af5f9.js.map"
+    "main.073cdee3.js.map": "/Personalsite/static/js/main.073cdee3.js.map"
   },
   "entrypoints": [
     "static/css/main.7b210f71.css",
-    "static/js/main.4e2af5f9.js"
+    "static/js/main.073cdee3.js"
   ]
 }
